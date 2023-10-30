@@ -4,7 +4,7 @@ type Props = {}
 
 const SingleCard = (props: Props) => {
   return (
-    <div className='rounded-2xl bg-white lg:w-[18rem] lg:h-[18rem] w-[21rem] h-[18rem]  border border-gray-200'>
+    <div className='rounded-2xl bg-white lg:w-[22rem] lg:h-[18rem] w-[26rem] h-[18rem] ml-4 border border-gray-200'>
       <dt className='flex justify-between m-4 text-3xl font-semibold leading-9 text-gray-900'>
         <div className='text-sky-950 text-base font-bold font-Inter mt-2'>
           Notifications
