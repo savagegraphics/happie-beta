@@ -4,7 +4,7 @@ type Props = {}
 
 const LargeGrid = (props: Props) => {
   return (
-    <div className='rounded-2xl mt-4 bg-white lg:w-[42rem] lg:h-[20rem] w-[28rem] h-[20rem]  border border-gray-200'>
+    <div className='rounded-2xl mt-4 bg-white lg:w-[42rem] lg:h-[20rem] w-[22rem] h-[20rem]  border border-gray-200'>
       <dt className='flex justify-between m-4 text-3xl font-semibold leading-9 '>
         <div className='text-sky-950 ml-2 text-lg font-bold font-Inter mt-2'>
           Deliveries
