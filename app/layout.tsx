@@ -25,7 +25,7 @@ export default function RootLayout ({
         <GlobalNav />
 
         <div className='lg:pl-[205px]'>
-          <div className='mx-auto max-w-4xl'>
+          <div className='mx-auto max-w-6xl'>
             <div className='bg-white'>{/* <AddressBar /> */}</div>
             <div className=' shadow-lg shadow-black/20'>
               <div className='lg:mt-0 md:mt-0 mt-10'>{children}</div>
