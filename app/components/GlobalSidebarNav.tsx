@@ -4,7 +4,7 @@ import { demos, type Item } from './Sidebarnavlist'
 import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
 import clsx from 'clsx'
-import { Key, useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 
 export function GlobalNav () {
@@ -76,28 +76,17 @@ export function GlobalNav () {
         })}
       >
         <nav className='space-y-6 px-2 py-5'>
-          {demos.map(
-            (section: {
-              name: Key | null | undefined
-              items: { slug: Key | null | undefined }[]
-            }) => {
-              return (
-                <div key={section.name}>
-                  <div className='space-y-1'>
-                    {section.items.map(
-                      (item: { slug: Key | null | undefined }) => (
-                        <GlobalNavItem
-                          key={item.slug}
-                          item={item}
-                          close={close}
-                        />
-                      )
-                    )}
-                  </div>
+          {demos.map(section => {
+            return (
+              <div key={section.name}>
+                <div className='space-y-1'>
+                  {section.items.map(item => (
+                    <GlobalNavItem key={item.slug} item={item} close={close} />
+                  ))}
                 </div>
-              )
-            }
-          )}
+              </div>
+            )
+          })}
         </nav>
         {/* <Byline className="absolute hidden sm:block" /> */}
       </div>
@@ -120,12 +109,11 @@ function GlobalNavItem ({
       onClick={close}
       href={`/${item.slug}`}
       className={clsx(
-        'block rounded-md border border-white px-3 py-2 text-sm font-medium hover:text-gray-300',
+        'block rounded-md border  px-3 py-2 text-sm font-medium hover:text-gray-300',
         {
           'text-[#3A3A3A] text-base font-Aeonik font-medium hover:text-white hover:bg-[#36C6EB]':
             !isActive,
-          'text-white hover:text-blue-800 bg-[#54c4e0] hover:bg-[#54c4e0]':
-            isActive
+          'text-blue-600 hover:text-blue-800 hover:bg-[#54c4e0]': isActive
         }
       )}
       style={{ display: 'flex', alignItems: 'center' }} // Add this style
