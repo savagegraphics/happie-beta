@@ -1,6 +1,6 @@
 'use client;'
 import React from 'react'
-import Dashboard from './Dashboard/Dashboard'
+import Dashboard from './Merchant/Dashboard'
 
 type Props = {}
 

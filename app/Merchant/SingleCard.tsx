@@ -4,13 +4,18 @@ type Props = {}
 
 const SingleCard = (props: Props) => {
   return (
-    <div className='rounded-2xl bg-white lg:w-[22rem] lg:h-[18rem] w-[22rem] h-[18rem] border border-gray-200'>
+    <div className='rounded-2xl bg-white lg:w-full lg:h-[20rem] w-full h-[20rem] border border-gray-200'>
       <dt className='flex justify-between m-4 text-3xl font-semibold leading-9 text-gray-900'>
         <div className='text-sky-950 text-base font-bold font-Inter mt-2'>
           Notifications
         </div>
-        <div className='text-xs bg-[#0F2B48] rounded-md p-2 text-white font-Inter'>
-          See all
+        <div className=''>
+          <button
+            type='button'
+            className='py-2 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#0F2B48] text-white hover:bg-[#284b70] disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 font-Inter'
+          >
+            See all
+          </button>
         </div>
       </dt>
       <hr />
@@ -64,12 +69,22 @@ const SingleCard = (props: Props) => {
           <p className='text-[12px] mt-1 text-neutral-600 text-opacity-50 font-semibold font-Inter'>
             Kayode wants to send you an item
           </p>
-          <div className='flex space-x-4 m-2'>
-            <div className='text-xs bg-gray-400 rounded-md px-4 py-2 text-white font-Inter'>
-              Decline
+          <div className='flex space-x-4 my-3'>
+            <div className=''>
+              <button
+                type='button'
+                className='py-2 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-gray-500 hover:bg-gray-400 text-white disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 font-Inter'
+              >
+                Decline
+              </button>
             </div>
-            <div className='text-xs bg-[#0F2B48] rounded-md px-4 py-2 text-white font-Inter'>
-              Accept
+            <div className=''>
+              <button
+                type='button'
+                className='py-2 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-[#0F2B48] text-white hover:bg-[#284b70] disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 font-Inter'
+              >
+                Accept
+              </button>
             </div>
           </div>
           <p className='text-[10px] mt-1 text-neutral-600 text-opacity-50 font-semibold font-Inter'>

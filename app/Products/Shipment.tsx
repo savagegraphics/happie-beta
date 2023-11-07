@@ -1,9 +1,8 @@
 import React from 'react'
-import OneGrid from '@/app/Dashboard/OneGrid'
+import OneGrid from '@/app/Merchant/OneGrid'
 import Delivery from './Delivery'
 import Shippings from './Shippings'
 import Header from './Header'
-
 
 type Props = {}
 

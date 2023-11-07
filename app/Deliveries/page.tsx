@@ -1,9 +1,14 @@
 import React from 'react'
+import Dashboard from './Dashboard'
 
 type Props = {}
 
 const page = (props: Props) => {
-  return <div>page</div>
+  return (
+    <div>
+      <Dashboard />
+    </div>
+  )
 }
 
 export default page

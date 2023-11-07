@@ -12,7 +12,7 @@ export function GlobalNav () {
   const close = () => setIsOpen(false)
 
   return (
-    <div className='fixed top-0 z-10 flex w-full flex-col border-b border-gray-100 bg-white lg:bottom-0 lg:z-auto lg:w-[205px] lg:border-b-0 lg:border-r lg:border-gray-100'>
+    <div className='fixed top-0 z-10 flex w-full flex-col border-b border-gray-100 bg-[#0F2B48] lg:bottom-0 lg:z-auto lg:w-[18%] lg:border-b-0 lg:border-r lg:border-gray-100'>
       <div className='flex h-14 items-center py-4 px-4 lg:h-auto'>
         <Link
           href='/'
@@ -33,9 +33,6 @@ export function GlobalNav () {
         className='group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden'
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className='font-medium text-[#3A3A3A] group-hover:text-gray-300'>
-          Menu
-        </div>
         {isOpen ? (
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -43,7 +40,7 @@ export function GlobalNav () {
             viewBox='0 0 24 24'
             strokeWidth={1.5}
             stroke='currentColor'
-            className='block w-6 text-[#3A3A3A]'
+            className='block w-6 text-white'
           >
             <path
               strokeLinecap='round'
@@ -58,7 +55,7 @@ export function GlobalNav () {
             viewBox='0 0 24 24'
             stroke-width='1.5'
             stroke='currentColor'
-            className='block w-6 text-[#3A3A3A]'
+            className='block w-6 text-white'
           >
             <path
               stroke-linecap='round'
@@ -71,7 +68,8 @@ export function GlobalNav () {
 
       <div
         className={clsx('overflow-y-auto lg:static lg:block', {
-          'fixed inset-x-0 bottom-0 top-14 mt-px bg-white text-white': isOpen,
+          'fixed inset-x-0 bottom-0 top-14 mt-px bg-[#0F2B48] text-white':
+            isOpen,
           hidden: !isOpen
         })}
       >
@@ -109,11 +107,12 @@ function GlobalNavItem ({
       onClick={close}
       href={`/${item.slug}`}
       className={clsx(
-        'block rounded-md border  px-3 py-2 text-sm font-medium hover:text-gray-300',
+        'block rounded-md  px-3 py-4 text-sm font-medium hover:text-gray-300 lg:mx-2',
         {
-          'text-[#3A3A3A] text-base font-Aeonik font-medium hover:text-white hover:bg-[#36C6EB]':
+          'text-white text-base font-Aeonik font-medium hover:text-white hover:bg-[#36C6EB]':
             !isActive,
-          'text-blue-600 hover:text-blue-800 hover:bg-[#54c4e0]': isActive
+          'hover:text-blue-800 text-white bg-[#54c4e0] hover:bg-[#54c4e0]':
+            isActive
         }
       )}
       style={{ display: 'flex', alignItems: 'center' }} // Add this style
@@ -121,8 +120,8 @@ function GlobalNavItem ({
       <Image
         src={item.icon}
         alt={item.slug}
-        width={12}
-        height={18}
+        width={16}
+        height={22}
         className='mr-4 text-white'
       />
       <p className='font-medium font-Aeonik text-base text-[12px]'>
