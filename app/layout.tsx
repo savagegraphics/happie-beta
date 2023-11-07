@@ -24,7 +24,7 @@ export default function RootLayout ({
       <body className='bg-[#ECF1F6] overflow-y-scroll'>
         <GlobalNav />
 
-        <div className='lg:pl-[245px]'>
+        <div className='lg:pl-[18%]'>
           <div className='mx-auto'>
             <div className='bg-white'>{/* <AddressBar /> */}</div>
             <div className=' shadow-lg shadow-black/20'>

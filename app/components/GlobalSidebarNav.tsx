@@ -24,7 +24,7 @@ export function GlobalNav () {
           </div> */}
 
           <h3 className='font-semibold tracking-wide bg-transparent text-gray-900 group-hover:text-gray-500'>
-            <Image src='/svg/Happie.svg' alt='' width={100} height={100} />
+            <Image src='/assets/Happie.png' alt='' width={100} height={100} />
           </h3>
         </Link>
       </div>
